@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Mission - Cognitra</title>
+    <link rel="icon" href="../docs/assets/cognitralogo.png" type="image/png">
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +25,38 @@
                 <li><a href="our-mission.html">Our Mission</a></li>
             </ul>
             <div class="nav-buttons">
-                <a href="#" class="btn btn-primary">Book a Strategy Call</a>
+                <a href="#" class="btn btn-primary open-strategy-modal">Book a Strategy Call</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="container" style="text-align: center;">
-             <h1>Our Mission</h1>
-             <p class="subheadline">Content for this page is coming soon.</p>
+        <!-- Main content for the 'Our Mission' page goes here -->
+        <section class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+                <h1>Our Mission — Cognitive Liberation for the Next Generation of Business</h1>
+                <p class="subheadline">At Cognitra, our mission is bold: <br><strong>Cognitive liberation through intelligent systems.</strong></p>
+            </div>
+
+            <div class="image-text-split">
+                <div class="image-container">
+                    <img src="../docs/assets/ourmissionimage.png" alt="A visual representation of Cognitra's mission to amplify human potential">
+                </div>
+                <div class="text-container">
+                    <h3>What does that mean?</h3>
+                    <p>It means freeing minds from the grind. Reclaiming energy from endless admin. Killing the copy-paste routine. It means <strong>helping humans do what only humans can do</strong> — think, feel, create, lead.</p>
+
+                     <p>We believe every business deserves access to the kind of tools that make billion-dollar companies run smoother:  
+                     <strong>Automation. AI. Integration. Insight.</strong></p>
+
+                     <p>Our work removes friction from your day. It replaces chaos with clarity. And it unlocks your <strong>cognitive bandwidth</strong> — so you and your team can focus on the work that <em>moves the needle</em>.</p>
+
+                     <p>We call it <strong>Cognitive Liberation</strong>.<br>
+                     It’s not just our mission — it’s a movement.  
+                     And it starts with one automated workflow at a time.</p>
+
+                </div>
+            </div>
         </section>
 
         <!-- Bottom CTA Banner -->
@@ -40,7 +64,7 @@
             <div class="container">
                 <h2>Less Manual Work. More Time for What Matters.</h2>
                 <p class="subheadline">See what AI-empowered business feels like.</p>
-                <a href="#" class="btn btn-primary">Book a Strategy Call</a>
+                <a href="#" class="btn btn-primary open-strategy-modal">Book a Strategy Call</a>
             </div>
         </section>
     </main>
@@ -79,5 +103,28 @@
     </footer>
 
     <script src="../script.js"></script>
+</main>
+
+<!-- Modal Popup for Strategy Call (shared) -->
+<div id="strategy-modal-overlay" class="modal-overlay">
+    <div class="modal-window">
+        <form id="strategy-contact-form" class="contact-form">
+            <h2>Contact Us</h2>
+            <label for="contact-name">Name & Surname</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Your full name">
+
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required placeholder="you@email.com">
+
+            <label for="contact-position">Position & Company</label>
+            <input type="text" id="contact-position" name="position" required placeholder="Your position & company">
+
+            <label for="contact-message">Brief Description</label>
+            <textarea id="contact-message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
+
+            <button type="submit" class="btn btn-primary" id="send-contact-btn">Send</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

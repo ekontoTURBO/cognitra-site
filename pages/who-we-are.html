@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who We Are - Cognitra</title>
+    <link rel="icon" href="../docs/assets/cognitralogo.png" type="image/png">
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +25,29 @@
                 <li><a href="our-mission.html">Our Mission</a></li>
             </ul>
             <div class="nav-buttons">
-                <a href="#" class="btn btn-primary">Book a Strategy Call</a>
+                <a href="#" class="btn btn-primary open-strategy-modal">Book a Strategy Call</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="container" style="text-align: center;">
-             <h1>Who We Are</h1>
-             <p class="subheadline">Content for this page is coming soon.</p>
+        <!-- Main content for the 'Who We Are' page goes here -->
+        <section class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+                <h1>Who We Are</h1>
+                <p class="subheadline">We are a passionate team of innovators, engineers, and strategists dedicated to revolutionizing how businesses operate. We believe in the power of intelligent automation to unlock human potential.</p>
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <h3>Our Story</h3>
+                    <p>Cognitra was founded on a simple observation: too many brilliant people were bogged down by repetitive, manual tasks. We saw an opportunity to build smart, adaptable AI agents that could handle the grunt work, freeing up teams to focus on creativity, strategy, and growth. From a small startup to a growing force in automation, our core mission has remained the same.</p>
+                </div>
+                <div class="column">
+                    <h3>Our Team</h3>
+                    <p>Our team brings together decades of experience from diverse fields like software engineering, data science, and business process management. We are united by a shared curiosity and a relentless drive to build tools that are not just powerful, but also intuitive and accessible for everyone.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Bottom CTA Banner -->
@@ -40,7 +55,7 @@
             <div class="container">
                 <h2>Less Manual Work. More Time for What Matters.</h2>
                 <p class="subheadline">See what AI-empowered business feels like.</p>
-                <a href="#" class="btn btn-primary">Book a Strategy Call</a>
+                <a href="#" class="btn btn-primary open-strategy-modal">Book a Strategy Call</a>
             </div>
         </section>
     </main>
@@ -79,5 +94,28 @@
     </footer>
 
     <script src="../script.js"></script>
+</main>
+
+<!-- Modal Popup for Strategy Call (shared) -->
+<div id="strategy-modal-overlay" class="modal-overlay">
+    <div class="modal-window">
+        <form id="strategy-contact-form" class="contact-form">
+            <h2>Contact Us</h2>
+            <label for="contact-name">Name & Surname</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Your full name">
+
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required placeholder="you@email.com">
+
+            <label for="contact-position">Position & Company</label>
+            <input type="text" id="contact-position" name="position" required placeholder="Your position & company">
+
+            <label for="contact-message">Brief Description</label>
+            <textarea id="contact-message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
+
+            <button type="submit" class="btn btn-primary" id="send-contact-btn">Send</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
