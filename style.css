@@ -1,3 +1,106 @@
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: auto;
+        background: rgba(10,17,48,0.98);
+        flex-direction: column;
+        gap: 0;
+        z-index: 2001;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        min-width: 220px;
+        max-width: 90vw;
+        border-radius: 0 0 0 16px;
+        align-items: flex-end;
+        text-align: right;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: right;
+        padding-right: 1.2rem;
+    }
+    nav ul li.mobile-only .btn {
+        width: 90%;
+        margin: 0.7rem auto;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .steps {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        gap: 1rem !important;
+        justify-items: center !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+    .step {
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+}
+/* --- Responsive 2x2 Steps Grid for Mobile --- */
+@media (max-width: 600px) {
+    .steps {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        gap: 1rem !important;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .step {
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 !important;
+        text-align: center;
+    }
+}
+/* --- Utility Classes for Responsive Nav --- */
+.mobile-only { display: none !important; }
+.desktop-only { display: flex !important; }
+@media (max-width: 600px) {
+    .mobile-only { display: block !important; width: 100%; text-align: center; }
+    .desktop-only { display: none !important; }
+    nav ul li.mobile-only .btn { width: 90%; margin: 0.7rem auto; font-size: 1.1rem; }
+}
+/* --- Centering and Scaling for Mobile --- */
+@media (max-width: 900px) {
+    body, main, .container, section, .footer-main, .footer-bottom, .case-study-cards, .columns, .image-gallery, .image-text-split {
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    .container { width: 99%; padding: 1.2rem 0; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; }
+    h3 { font-size: 0.95rem; }
+    .logo-img { height: 24px; }
+    .btn, .btn-primary, .btn-secondary, .btn-ghost { font-size: 0.95rem; padding: 0.5rem 0.9rem; }
+    .agent-showcase .agent-window { padding: 1rem 0.2rem; }
+    .case-study-cards { gap: 1rem; }
+    .columns { gap: 1rem; }
+    .image-gallery { gap: 0.5rem; }
+    .image-text-split { gap: 1rem; }
+    .footer-main { gap: 1rem; }
+    .footer-bottom ul { gap: 0.3rem; }
+    .modal-window { min-width: 98vw; max-width: 99vw; padding: 0.5rem 0.1rem; }
+    .contact-form { max-width: 99vw; }
+}
 /* --- Mobile Responsive Styles --- */
 @media (max-width: 900px) {
     .container {
@@ -61,7 +164,14 @@
     z-index: 2002;
 }
 @media (max-width: 600px) {
-    .nav-toggle { display: block; }
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        left: auto;
+        z-index: 3000;
+    }
 }
 /* --- Contact Form Styles (Modal) --- */
 .contact-form {

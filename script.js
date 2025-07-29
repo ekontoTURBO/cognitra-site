@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.setAttribute('aria-expanded', isOpen);
         });
         // Optional: close menu when clicking a link (for single page feel)
-        navMenu.querySelectorAll('a').forEach(link => {
+        navMenu.querySelectorAll('a, .btn').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
                 navToggle.setAttribute('aria-expanded', false);
